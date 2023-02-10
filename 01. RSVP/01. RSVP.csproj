@@ -67,8 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="About.aspx" />
     <Content Include="Reg.aspx" />
     <Content Include="seeyouthere.html" />
     <Content Include="sorryyoucantcome.html" />
@@ -78,6 +78,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GuestResponse.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -85,7 +86,6 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GuestResponse.cs" />
     <Compile Include="Reg.aspx.cs">
       <DependentUpon>Reg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
