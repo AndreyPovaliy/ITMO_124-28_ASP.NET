@@ -11,7 +11,18 @@ namespace _01.RSVP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            long numVisitors = 0;
+            if (Application["Visitors"] != null) 
+            { 
+                numVisitors = long.Parse(Application["Visitors"].ToString());
+                VisitorLiteral.Text = "Число посещений: " + numVisitors.ToString();
+
+            }
+
+           
 
         }
     }
+    
+    
 }

@@ -37,6 +37,7 @@
                             <asp:MenuItem NavigateUrl="~/About.aspx" Text="Подробности"/>
                         </Items>
                     </asp:Menu>
+                    </div>
             </td> 
             <td>&nbsp;
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -45,6 +46,7 @@
         </tr> 
         <tr> 
             <td colspan="3" class="auto-style4">
+
                 &nbsp; <%--Нижний колонтитул--%> 
                 <div id="temo_footer"> 
                     <ul class="footer_menu"> 
@@ -68,7 +70,10 @@
                     </ul> 
 
                 </div> 
+                <div class="footer"> 
+                    <asp:Literal ID="VisitorLiteral" runat="server" /> 
 
+                </div>
             </td> 
         </tr> 
     </table>
