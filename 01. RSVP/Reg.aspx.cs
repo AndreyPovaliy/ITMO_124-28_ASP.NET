@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static _01.RSVP.GuestResponse;
 
 namespace _01.RSVP
 {
@@ -12,6 +13,7 @@ namespace _01.RSVP
         
         protected void Page_Load(object sender, EventArgs e)
         {
+
 
             if (IsPostBack)
             {
@@ -26,6 +28,31 @@ namespace _01.RSVP
                 } else 
                 { 
                     Response.Redirect("sorryyoucantcome.html"); }
+            }
+
+            if (CheckBoxYN.Checked)
+            {
+                GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
+                Report report1 = new Report(TextBoxTitle.Text, TextBoxTextAnnot.Text); 
+                rsvp.Reports.Add(report1);
+            }
+
+            if (TextBoxTitle2.Text != "" || TextBoxTextAnnot2.Text != "") 
+            {
+                GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
+                Report report2 = new Report(TextBoxTitle2.Text, TextBoxTextAnnot2.Text); 
+                rsvp.Reports.Add(report2); 
+            }
+            try 
+            {
+                GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
+                SampleContext context = new SampleContext(); 
+                context.GuestResponses.Add(rsvp); 
+                context.SaveChanges(); 
+            } 
+            catch (Exception ex) 
+            { 
+                Response.Redirect("Ошибка " + ex.Message); 
             }
 
         }
