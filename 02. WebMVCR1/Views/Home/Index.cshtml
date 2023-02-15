@@ -1,19 +1,11 @@
 ﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        @ViewBag.Greeting, спасибо, что зашли и @ViewData["Mes"]
-        <p>@Html.ActionLink("Введите свои данные", "InputData")</p>
-    </div>
-</body>
-</html>
+@{ 
+     
+    }
+<div>
+    @ViewBag.Greeting, спасибо, что зашли
+    <p>
+        @Html.ActionLink("Введите имя", "InputData")
+    </p>
+    @Html.ActionLink("Посмотрите, кто уже здесь", "OutputData")
+</div>

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. RSVP", "01. RSVP\01. RS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. WebMVCR1", "02. WebMVCR1\02. WebMVCR1.csproj", "{1D7B9CF1-9F3D-4277-9FD8-384A9A6DC309}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Final_task", "03. Final_task\03. Final_task.csproj", "{D95EA64A-07EC-4BA7-A3C8-390986775054}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. MvcCreditApp1", "03. MvcCreditApp1\03. MvcCreditApp1.csproj", "{9CECBE25-763D-4D66-AC8C-C9C19398FE4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{1D7B9CF1-9F3D-4277-9FD8-384A9A6DC309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D7B9CF1-9F3D-4277-9FD8-384A9A6DC309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D7B9CF1-9F3D-4277-9FD8-384A9A6DC309}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D95EA64A-07EC-4BA7-A3C8-390986775054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D95EA64A-07EC-4BA7-A3C8-390986775054}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D95EA64A-07EC-4BA7-A3C8-390986775054}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D95EA64A-07EC-4BA7-A3C8-390986775054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CECBE25-763D-4D66-AC8C-C9C19398FE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CECBE25-763D-4D66-AC8C-C9C19398FE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CECBE25-763D-4D66-AC8C-C9C19398FE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CECBE25-763D-4D66-AC8C-C9C19398FE4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

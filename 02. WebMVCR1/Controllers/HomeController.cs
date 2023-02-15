@@ -8,11 +8,13 @@ using System.Web.Mvc;
 using static _02.WebMVCR1.Models.StudyCsharp;
 using static System.Web.Razor.Parser.SyntaxConstants;
 
+
 namespace _02.WebMVCR1.Controllers
 {
     public class HomeController : Controller
     {
         // GET: Home
+        
         public ViewResult Index() 
         { 
             int hour = DateTime.Now.Hour; 
@@ -115,9 +117,22 @@ namespace _02.WebMVCR1.Controllers
             return str.ToString();
 
         }
+        [HttpGet]
         public ViewResult InputData() 
         { 
             return View(); 
         }
+        
+        private static PersonRepository db = new PersonRepository();
+        [HttpPost]
+        public ViewResult InputData(Person p)
+        {
+            db.AddResponse(p);
+            return View("Hello", p);
+        }
+
+        public ViewResult OutputData() 
+        { 
+            ViewBag.Pers = db.GetAllResponses; ViewBag.Count = db.NumberOfPerson; return View("ListPerson"); }
     }
 }
