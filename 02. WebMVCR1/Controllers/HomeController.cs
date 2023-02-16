@@ -128,7 +128,7 @@ namespace _02.WebMVCR1.Controllers
         public ViewResult InputData(Person p)
         {
             db.AddResponse(p);
-            return View("Hello", p);
+            return View("After_adding", p);
         }
 
         public ViewResult OutputData() 

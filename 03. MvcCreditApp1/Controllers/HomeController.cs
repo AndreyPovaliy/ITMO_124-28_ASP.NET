@@ -40,6 +40,7 @@ namespace _03.MvcCreditApp1.Controllers
             ViewBag.Credits = allCredits;
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult CreateBid()
         {
@@ -57,6 +58,16 @@ namespace _03.MvcCreditApp1.Controllers
             db.SaveChanges(); 
             return "Спасибо, <b>" + newBid.Name + "</b>, за выбор нашего банка. Ваша заявка будет рассмотрена в течении 10 дней."; 
         }
-        
+        public ActionResult BidSearch(string name)
+        {
+            var allBids = db.Bids.Where(a => a.CreditHead.Contains(name)).ToList();
+            if (allBids.Count == 0)
+            {
+                return Content("Указанный кредит " + name + " не найден");
+                //return HttpNotFound();
+            }
+            return PartialView(allBids);
+        }
+
     }
 }
