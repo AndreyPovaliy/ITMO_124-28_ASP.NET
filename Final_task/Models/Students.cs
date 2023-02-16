@@ -10,15 +10,18 @@ namespace Final_task.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Group { get; set; }
-        public string Subject_1 { get; set; }
-        public string Subject_2 { get; set; }
-        public string Subject_3 { get; set; }
-        public string Subject_4 { get; set; }
-        public string Subject_5 { get; set; }
+        public int Subject_1 { get; set; }
+        public int Subject_2 { get; set; }
+        public int Subject_3 { get; set; }
+        public int Subject_4 { get; set; }
+        public int Subject_5 { get; set; }
+
+        
 
         public override string ToString() 
-        { 
-            string s = FirstName + " " + LastName; 
+        {
+            int sum = Subject_1 + Subject_2 + Subject_3 + Subject_4 + Subject_5;
+            string s = FirstName + " " + LastName + " группа №" + Group  + "сумма баллов=" + sum; 
             return s; 
         }
     }

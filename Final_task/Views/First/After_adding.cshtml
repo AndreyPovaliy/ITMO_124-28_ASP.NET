@@ -1,22 +1,14 @@
 ﻿@model Final_task.Models.Students
 
 @{
-    Layout = null;
+    Layout = "~/Views/_BasicLayout.cshtml"; 
+    ViewBag.Title = "Данные отправлены";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>After_adding</title>
-</head>
-<body>
     <div>
         <h1>Данные @Model.ToString() добавлены!</h1>
         <p>
             @Html.ActionLink("На главную", "Index")
         </p>
     </div>
-</body>
-</html>

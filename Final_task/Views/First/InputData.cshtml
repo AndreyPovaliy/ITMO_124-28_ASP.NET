@@ -1,17 +1,11 @@
 ﻿@model Final_task.Models.Students
 
 @{
-    Layout = null;
+    Layout = "~/Views/_BasicLayout.cshtml"; 
+    ViewBag.Title = "Форма ввода данных";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>InputData</title>
-</head>
-<body>
     <div>
         <form method="post">
             <table>
@@ -51,5 +45,4 @@
             </table>
         </form>
     </div>
-</body>
-</html>
+

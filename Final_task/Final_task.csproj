@@ -88,6 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -98,6 +99,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Students.cs" />
+    <Compile Include="Models\StudentsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +108,8 @@
     <Content Include="Views\First\Index.cshtml" />
     <Content Include="Views\First\InputData.cshtml" />
     <Content Include="Views\First\After_adding.cshtml" />
+    <Content Include="Views\First\ListPerson.cshtml" />
+    <Content Include="Views\_BasicLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

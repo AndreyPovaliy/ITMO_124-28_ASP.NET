@@ -25,7 +25,17 @@ namespace Final_task.Controllers
         [HttpPost]
         public ViewResult InputData(Students p)
         {
+            db.AddResponse(p);
             return View("After_adding", p);
+        }
+
+        private static StudentsRepository db = new StudentsRepository();
+
+        public ViewResult OutputData() 
+        { 
+            ViewBag.Pers = db.GetAllResponses; 
+            ViewBag.Count = db.NumberOfStudents; 
+            return View("ListPerson"); 
         }
     }
 }
