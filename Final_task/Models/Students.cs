@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
+using System.Web.Services.Description;
 
 namespace Final_task.Models
 {
     public class Students
     {
+        public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Group { get; set; }
@@ -24,5 +27,8 @@ namespace Final_task.Models
             string s = FirstName + " " + LastName + " группа №" + Group  + "сумма баллов=" + sum; 
             return s; 
         }
+
+       
     }
+    
 }

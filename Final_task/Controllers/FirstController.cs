@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Linq;
+using static Final_task.Models.Students;
 
 namespace Final_task.Controllers
 {
@@ -27,15 +29,19 @@ namespace Final_task.Controllers
         {
             db.AddResponse(p);
             return View("After_adding", p);
+
+        
+
         }
 
         private static StudentsRepository db = new StudentsRepository();
 
-        public ViewResult OutputData() 
-        { 
-            ViewBag.Pers = db.GetAllResponses; 
-            ViewBag.Count = db.NumberOfStudents; 
-            return View("ListPerson"); 
-        }
+        public ViewResult OutputData()
+        {
+            ViewBag.Pers = db.GetAllResponses;
+            ViewBag.Count = db.NumberOfStudents;
+            return View("ListPerson");
+
+        }   
     }
 }
