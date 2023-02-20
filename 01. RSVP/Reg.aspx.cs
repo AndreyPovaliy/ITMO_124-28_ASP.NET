@@ -33,8 +33,7 @@ namespace _01.RSVP
             if (CheckBoxYN.Checked)
             {
                 GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
-                Report report1 = new Report(TextBoxTitle.Text, TextBoxTextAnnot.Text); 
-                rsvp.Reports.Add(report1);
+                Report report1 = new Report(TextBoxTitle.Text, TextBoxTextAnnot.Text); rsvp.Reports.Add(report1);
             }
 
             if (TextBoxTitle2.Text != "" || TextBoxTextAnnot2.Text != "") 
@@ -43,6 +42,7 @@ namespace _01.RSVP
                 Report report2 = new Report(TextBoxTitle2.Text, TextBoxTextAnnot2.Text); 
                 rsvp.Reports.Add(report2); 
             }
+
             try 
             {
                 GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
